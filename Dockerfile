@@ -1,4 +1,5 @@
 FROM node:10 as builder
+RUN npx browserslist@latest --update-db
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
